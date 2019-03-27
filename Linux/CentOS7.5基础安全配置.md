@@ -5,7 +5,20 @@
 
 ### 1.更新yum源
 ```
-[root@localhost ~]# yum update
+# yum源备份
+cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.$(date +%F_%T)
+
+# 阿里云yum
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+# 163yum源
+wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo
+
+yum makecache
+yum clean all
+yum  -y update
+
+#安装扩展包更新包
+yum  -y install epel-release 
 ```
 ### 2.安装net-tools工具包：包含ifconfig命令
 
@@ -122,7 +135,7 @@ systemctl stop xinetd           #关闭
 #### 9.设置SSH安全配置（使用telnet连接服务器成功后再去配置ssh，否则一旦配置失败ssh重启生效后服务器就连不上了）
 ###### 1.查看ssh版本
 >如果ssh版本是7.0以下需要升级到最新版本
->>版本升级文档：[SSH升级到7.5](http://www.cnblogs.com/GNblog/p/7126966.html)
+>>版本升级文档：[SSH升级到7.9](https://www.cnblogs.com/GNblog/p/10246070.html)
 ```
 [root@localhost ~]# ssh -V
 OpenSSH_7.4p1, OpenSSL 1.0.2k-fips  26 Jan 2017
