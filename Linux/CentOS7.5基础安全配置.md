@@ -61,8 +61,8 @@ yum  -y install epel-release
 ## CentOS Linux release 7.5.1804 (Core) 系统安全配置
 #### 1.添加管理员账户qlgl
 ```
-useradd qlgl
-passwd qlgl
+useradd gl
+passwd gl
 ```
 #### 2.添加qlgl管理员账户的sudo权限
 >注意使用root用户登录系统进行操作
