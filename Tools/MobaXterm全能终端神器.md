@@ -1,4 +1,7 @@
 # MobaXterm全能终端神器
+
+[点击查看详细介绍及常用说明](https://cloud.tencent.com/developer/news/244102)
+
 ```html
 
 MobaXterm 又名 MobaXVT，是一款增强型终端、X 服务器和 Unix 命令集（GNU/ Cygwin）工具箱。
@@ -11,3 +14,6 @@ MobaXterm 分免费开源版和收费专业版。官网提供 MobaXterm 的免�
 
 MobaXterm 免费版（persional）和专业版（Professional）除了 sessions 数、SSH tunnels 数和其他一些定制化配置外限制外，免费版在终端底部还多了一个 "UNREGISTERED VERSION" 提示。
 ```
+
+### 1. 下载MobaXterm
+- [查看下载地址](https://mobaxterm.mobatek.net/download-home-edition.html)
