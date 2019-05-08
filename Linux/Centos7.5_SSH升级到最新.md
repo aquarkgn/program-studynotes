@@ -10,7 +10,7 @@ rpm -e `rpm -qa | grep openssh`
 #### 2.安装依赖包
 
 ```bash
-yum -y install zlib-devel openssl-devel pam-devel
+yum -y install gcc zlib-devel openssl-devel pam-devel
 ```
 
 #### 3.安装zlib依赖包
