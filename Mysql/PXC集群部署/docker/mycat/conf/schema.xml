@@ -16,26 +16,26 @@
 			  writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100">
 		<heartbeat>select user()</heartbeat>
 		<!-- can have multi write hosts -->
-		<writeHost host="M1" url="172.101.0.11:3306" user="root" password="ABC123456">
+		<writeHost host="M1" url="192.168.11.11:3306" user="root" password="ABC123456">
 			<!-- can have multi read hosts -->
-			<readHost host="M1S1" url="172.101.0.12:3306" user="root" password="ABC123456" />
-			<readHost host="M1S2" url="172.101.0.13:3306" user="root" password="ABC123456" />
-			<readHost host="M1S3" url="172.101.0.14:3306" user="root" password="ABC123456" />
-			<readHost host="M1S4" url="172.101.0.15:3306" user="root" password="ABC123456" />
+			<readHost host="M1S1" url="192.168.11.12:3306" user="root" password="ABC123456" />
+			<readHost host="M1S2" url="192.168.11.13:3306" user="root" password="ABC123456" />
+			<readHost host="M1S3" url="192.168.11.14:3306" user="root" password="ABC123456" />
+			<readHost host="M1S4" url="192.168.11.15:3306" user="root" password="ABC123456" />
 		</writeHost>
-		<writeHost host="M2" url="172.101.0.12:3306" user="root" password="ABC123456">
+		<writeHost host="M2" url="192.168.11.12:3306" user="root" password="ABC123456">
 			<!-- can have multi read hosts -->
-			<readHost host="M2S1" url="172.101.0.11:3306" user="root" password="ABC123456" />
-			<readHost host="M2S2" url="172.101.0.13:3306" user="root" password="ABC123456" />
-			<readHost host="M2S3" url="172.101.0.14:3306" user="root" password="ABC123456" />
-			<readHost host="M2S4" url="172.101.0.15:3306" user="root" password="ABC123456" />
+			<readHost host="M2S1" url="192.168.11.11:3306" user="root" password="ABC123456" />
+			<readHost host="M2S2" url="192.168.11.13:3306" user="root" password="ABC123456" />
+			<readHost host="M2S3" url="192.168.11.14:3306" user="root" password="ABC123456" />
+			<readHost host="M2S4" url="192.168.11.15:3306" user="root" password="ABC123456" />
 		</writeHost>
-		<writeHost host="M3" url="172.101.0.13:3306" user="root" password="ABC123456">
+		<writeHost host="M3" url="192.168.11.13:3306" user="root" password="ABC123456">
 			<!-- can have multi read hosts -->
-			<readHost host="M3S1" url="172.101.0.11:3306" user="root" password="ABC123456" />
-			<readHost host="M3S2" url="172.101.0.12:3306" user="root" password="ABC123456" />
-			<readHost host="M3S3" url="172.101.0.14:3306" user="root" password="ABC123456" />
-			<readHost host="M3S4" url="172.101.0.15:3306" user="root" password="ABC123456" />
+			<readHost host="M3S1" url="192.168.11.11:3306" user="root" password="ABC123456" />
+			<readHost host="M3S2" url="192.168.11.12:3306" user="root" password="ABC123456" />
+			<readHost host="M3S3" url="192.168.11.14:3306" user="root" password="ABC123456" />
+			<readHost host="M3S4" url="192.168.11.15:3306" user="root" password="ABC123456" />
 		</writeHost>
 	</dataHost>
 
