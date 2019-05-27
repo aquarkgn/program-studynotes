@@ -21,3 +21,5 @@
   "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 }
 ```
+
+### 2. 换行快捷键 `alt + z`
