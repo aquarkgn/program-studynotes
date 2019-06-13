@@ -1,3 +1,4 @@
+# Ubuntu环境ssr客户端安装
 > root 权限下的安装
 ### 1. 安装依赖
 ```bash
@@ -70,6 +71,7 @@ service privoxy start
 
 
 # 测试
+proxychains4 curl -sL www.google.com
 ```
 日志文件位置： `/var/log/privoxy/logfile`
 
