@@ -4,4 +4,5 @@
 *.lk
 *.zip
 
-.history/*
+.DS_Store
+.history
