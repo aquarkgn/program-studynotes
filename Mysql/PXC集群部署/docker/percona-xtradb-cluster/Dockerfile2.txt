@@ -1,0 +1,22 @@
+FROM ubuntu:latest
+
+# 替换中科大源并更新 apt-get 
+RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && \
+    apt-get update
+
+# 安装依赖
+RUN apt-get install -y git scons gcc g++ openssl check cmake bison \
+    libboost-all-dev libasio-dev libaio-dev libncurses5-dev libreadline-dev \
+    libpam-dev socat libcurl4-openssl-dev
+
+# 源代码编译和安装
+RUN git clone https://github.com/percona/percona-xtradb-cluster.git && \
+    cd percona-xtradb-cluster-galera && \
+    git submodule init wsrep/src && git submodule update wsrep/src \
+    mkdir -p /usr/local/pxc-build && \
+    ./build-ps/build-binary.sh /usr/local/pxc-build
+
+
+# 在前台执行 mycat
+CMD ["/bin/bash"]
+

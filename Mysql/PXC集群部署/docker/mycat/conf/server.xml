@@ -94,7 +94,7 @@
 	</firewall>
 	-->
 
-	<user name="root" defaultAccount="true">
+	<user name="cmstop" defaultAccount="true">
 		<property name="password">ABC123456</property>
 		<property name="schemas">test</property>
 		
