@@ -4,5 +4,6 @@
 *.lk
 *.zip
 
+.idea/*
 .DS_Store
 .history
