@@ -92,6 +92,16 @@ pick fa20af3 git interactive rebase, squash, amend
 # Note that empty commits are commented out
 
 ```
+
+#### 6.查询日志状态
+```bash
+git log -1 --stat
+```
+
+### 7.拉取指定分支文件到当前分支
+```bash
+git checkout -p /dir/phth/file.name
+```
 --------------------- 
 >rebase合并命令的使用 版权声明：本文为CSDN博主「GhostStories」的原创文章，遵循CC 4.0 by-sa版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/wangnan9279/article/details/79287631
