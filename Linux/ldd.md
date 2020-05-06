@@ -1,0 +1,1 @@
+ ldd $(which /home/homework/redisproxy/bin/redisproxy)
