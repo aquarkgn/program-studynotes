@@ -78,7 +78,9 @@ grep -P '11-14 13:2[2-4]' tt.log| grep --color -P 'caller=Bd_DB.*method=query.*d
 fsh na fwyymis ssh "grep studentinfo tt.log" | grep -oP 'uid\[\w*\]' | sort -nr | uniq -c | wc -l
 
 #报警分析
-fsh 192.168.133.208 fwyymis ssh "grep -P '19:00' tt.log | grep 'err_info=Talk.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk' | head -10" |awk '{match($0,/.*.*(uri=.*?)req_start/,arr);print arr[1],arr[2]}' | sort -rnk2 | uniq -c | sort -r
+fsh 192.168.133.208 fwyymis ssh "grep -P '19:00' tt.log | grep 'err_info=Conn.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk' | head -10" |awk '{match($0,/.*.*(uri=.*?)req_start/,arr);print arr[1],arr[2]}' | sort -rnk2 | uniq -c | sort -r
+
+fsh na fwyymis ssh "grep -P '19:00' tt.log | grep 'err_info=Conn.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk'" | awk '{match($0,/.*(logid=[0-9]+).*(uri=[^0-9 ]+).*/,a);print a[1]" "a[2]}'
 ```
 
 ### 5.分析sql慢查询
