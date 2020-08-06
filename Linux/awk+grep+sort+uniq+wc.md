@@ -81,6 +81,10 @@ fsh na fwyymis ssh "grep studentinfo tt.log" | grep -oP 'uid\[\w*\]' | sort -nr 
 fsh 192.168.133.208 fwyymis ssh "grep -P '19:00' tt.log | grep 'err_info=Conn.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk' | head -10" |awk '{match($0,/.*.*(uri=.*?)req_start/,arr);print arr[1],arr[2]}' | sort -rnk2 | uniq -c | sort -r
 
 fsh na fwyymis ssh "grep -P '19:00' tt.log | grep 'err_info=Conn.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk'" | awk '{match($0,/.*(logid=[0-9]+).*(uri=[^0-9 ]+).*/,a);print a[1]" "a[2]}'
+
+
+
+fsh na fwyymis ssh "grep -P '20:00' /home/homework/log/ral/ral-worker.log.wf | grep 'err_info=Talk.*Failed' | grep 'log_type=E_SUM' | grep 'module=assistantdesk'" | awk '{match($0,/.*(remote_ip=[0-9\.\:]+).*(remote_ip=[0-9\.\:]+).*(uri=[^0-9 ]+).*/,a);print a[1]" "a[2]}' | sort -rn
 ```
 
 ### 5.分析sql慢查询

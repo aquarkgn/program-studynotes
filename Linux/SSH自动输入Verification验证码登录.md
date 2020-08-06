@@ -11,5 +11,5 @@
 ## ssh登录脚本 [SSH登录脚本](./source/relay.sh)
 
 ```bash
-relay.sh `python3 authy.py SDFESE2SDFD4SAAZ` passworkd
+./relay.sh
 ```
