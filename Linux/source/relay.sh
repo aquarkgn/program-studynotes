@@ -6,7 +6,6 @@ set verification [exec sh -c {/usr/bin/python3 /Users/gn/authy.py SDFESE2SDFD4SA
 
 set timeout 10
 spawn echo $verification
-spawn echo $passwd
 spawn ssh gaonan01@relay.zuoyebang.cc
 expect {
     "*yes/no" { 
