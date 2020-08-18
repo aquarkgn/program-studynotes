@@ -16,6 +16,8 @@ stream {
         listen       3388;
         proxy_pass  bzrdb;
 
+        allow 192.168.236.37;
+        deny all;
 #       proxy_set_header Host $host:$server_port;
 #       proxy_http_version 1.1;
 #       proxy_set_header Host $http_host;
