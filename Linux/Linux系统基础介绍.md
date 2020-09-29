@@ -1,15 +1,21 @@
 # Linux系统基础介绍
 
+## [Linux系统基础介绍]
+
 ### 1. Linux对比Windows的优点
+
 ![Linux基础](./images/1-1.png)
 
 ### 2. Linux目录结构介绍
+
 ![Linux基础](./images/1-2.png)
 
 ### 3. Linux文件属性
+
 ![Linux基础](./images/1-3.png)
 
 ### 4. Linux 的 7 个启动级别
+
 ```txt
 语法 init 0-6
 0: 系统停机模式
