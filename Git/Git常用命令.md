@@ -72,6 +72,30 @@ vi .git/info/sparse-checkout
 !filename
 ```
 
+### git 关闭所以分页和分屏/命令别名设置
+
+```bash
+vim ~/.gitconfig
+
+[user]
+        name = GN
+        email = gaonan01@zuoyebang.com
+[alias]
+ck = checkout
+cm = commit
+st = status
+br = branch
+sh = stash
+sh = stash list
+ps = push
+pl = pull -r
+rb = rebase
+lg = log -p
+[core]
+        pager = cat
+                   
+```
+
 # 二、常用命令
 
 #### 版本库状态
@@ -189,4 +213,22 @@ git log -1 --stat
 
 ```bash
 git checkout -p /dir/phth/file.name
+```
+
+### 8. 查看带有合并详情的历史记录
+
+```bash
+git log --graph --pretty=oneline --abbrev-commit -n 4
+
+                                                                                                                         dev
+*   2206b9c (HEAD -> dev, tag: ci_xiongchao_端内外化后端开发_2021_01_19_11_54_55639, tag: 2021-01-19-17-32-40490ci_xiongchao_端内外化后端开发_2021_01_19_11_54_55639稳定版本, origin/dev, origin/HEAD, gn-test-local) Merge branch 'offline_20210119' into 'dev'
+|\  
+| *   a5ef1ff (origin/offline_20210119) Merge branch 'feature_qa' into 'offline_20210119'
+| |\  
+|/ /  
+| *   278ecca (origin/feature_qa) Merge branch 'dev' into feature_qa
+| |\  
+| |/  
+|/|   
+* |   4ec94cf (tag: ci_zhangweinan_【人管】业务账号接入企微_2021_01_18_15_55_52272, tag: 2021-01-18-16-02-19954ci_zhangweinan_【人管】业务账号接入企微_2021_01_18_15_55_52272稳定版本) Merge branch 'zwn_laxinmisdocker' into 'dev'
 ```
