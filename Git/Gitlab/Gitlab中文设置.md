@@ -16,7 +16,7 @@ wget https://gitlab.com/xhang/gitlab/-/archive/11-11-stable-zh/gitlab-11-11-stab
 unzip gitlab-11-11-stable-zh.zip
 ```
 
-![Gitlab中文设置](./images/lab-1.png)
+![Gitlab中文设置](../images/lab-1.png)
 
 ### 3. 中文设置
 
